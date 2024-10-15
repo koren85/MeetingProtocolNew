@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table-auto {
+  table-layout: auto;
+  min-width: 100%;
+}
+
+.table-auto th,
+.table-auto td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-auto .tasks-column {
+  min-width: 200px;
+  max-width: 400px;
+  width: 25%;
+}
+
+.table-auto .tasks-column textarea {
+  resize: horizontal;
+  min-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .table-auto .tasks-column {
+    min-width: 150px;
+    max-width: 250px;
+  }
+}
+
+/* Стили для выпадающего списка региона */
+.table-auto td select {
+  width: auto;
+  min-width: 100%;
+}
+
+/* Стили для выпадающего списка исполнителей */
+.table-auto td .react-select__control {
+  min-height: 38px;
+  height: 38px;
+}
+
+.table-auto td .react-select__menu {
+  max-height: 200px;
+}
+
+.table-auto td .react-select__option {
+  display: flex;
+  align-items: center;
+}
+
+.table-auto td .react-select__option input[type="checkbox"] {
+  margin-right: 8px;
+}
